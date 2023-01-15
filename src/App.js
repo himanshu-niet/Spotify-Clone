@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Footer } from "./components/Footer";
+import { Home } from "./components/Home";
+import { Sidebar } from "./components/Sidebar";
+import { Routes, Route} from "react-router-dom";
+import {SongState} from './context/songContex'
+import { AlbumState } from "./context/albumContext";
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AlbumState>
+      <SongState>
+        <div className="grid md:grid-cols-5   font-[Manrope] ">
+          <div className="md:col-span-1  w-full ">
+            <Sidebar />
+          </div>
+          <div className="md:col-span-4">
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+            </Routes>
+          </div>
+        </div>
+        <Footer />
+      </SongState>
+    </AlbumState>
   );
 }
 
