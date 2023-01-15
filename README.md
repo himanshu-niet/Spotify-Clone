@@ -1,4 +1,4 @@
-# Link->  https://spotify-nine-gray.vercel.app/
+# Live->  https://spotify-nine-gray.vercel.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
